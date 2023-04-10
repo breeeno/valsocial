@@ -1,0 +1,6 @@
+SQLAlchemy
+uvicorn[standard]
+fastapi
+requests
+python-decouple
+psycopg2-binary
