@@ -1,6 +1,6 @@
 import requests
 from agents.model import Agents
-from settings import Base, engine, session
+from settings import Base, engine, Session
 
 
 def busca_agentes():
@@ -33,8 +33,9 @@ def busca_agentes():
 
 
 if __name__ == '__main__':
-    data = busca_agentes()
     Base.metadata.create_all(engine)
+    session = Session()
+    data = busca_agentes()
     for agent_data in data:
         agent = Agents(
             name=agent_data['agent_name'],

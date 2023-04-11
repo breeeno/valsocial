@@ -1,5 +1,5 @@
 from decouple import config
-from sqlalchemy import MetaData, create_engine, Column, Integer, String
+from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 database_url = config('SQLALCHEMY_DATABASE_URI')
