@@ -18,6 +18,7 @@ class Person(Base):
     __tablename__ = "person"
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=False, nullable=False)
+    password = Column(String, nullable=False)
     elo = Column(ChoiceType(ELOS_CHOICES), default='UNRANKED', nullable=False)
     favorite_agent_id = Column(Integer, ForeignKey('agents.id'))
     favorite_agent = relationship(Agents, backref=backref('person', uselist=True))
