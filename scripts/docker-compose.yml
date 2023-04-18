@@ -1,11 +1,12 @@
-version: "3.8"
+version: '3'
 services:
-    db:
-        container_name: "val_social_database"
-        build:
-          context: ..
-          dockerfile: docker_db.dockerfile
-        expose:
-          - "5432"
-        ports:
-        - '5432:5432'
+  db_val_social:
+    image: postgres
+    container_name: val_social_database
+    restart: always
+    ports:
+      - "5452:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres

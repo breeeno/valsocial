@@ -5,3 +5,6 @@ requests
 python-decouple
 psycopg2-binary
 sqlalchemy-utils
+pyjwt
+passlib[bcrypt]
+python-multipart
